@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <style>
+        input{
+            cursor: pointer;
+    
+        }
+        .btn{
+            padding: 15px;
+            background-color:darkkhaki;
+        }
+        input :hover{
+            color: goldenrod;
+        }
+        .btn :hover{
+           background-color: goldenrod;
+        }   
+        
+        </style>
+    </head>
+    <center>
+    <body >
+        <h1>My first sub-window</h1>
+       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Googlelogo.png/1200px-Googlelogo.png"
+       height="10%" width="30%" > 
+       <br>
+           <input type="text" id="in" placeholder="Search with Google or enter address">
+        <br>
+        
+        <input type="button" class="btn" onclick="fun()" value="Google Search">
+        <br>
+        <br>
+        <iframe id ="if" src="" height="" width="">
+
+        </iframe>
+        <br>
+        <br>
+        Height<input type="text" id="h" placeholder="height of frame">
+        
+        Width<input type="text" id="w" placeholder="width of frame">
+        <br>  
+        <input type="button" value="Change Size" class="btn" onclick="change()">
+    </center>
+    </body>
+    <script>
+    function fun(){
+        var x=document.getElementById("in").value;
+        var v=document.getElementById("if");
+        v.setAttribute("src",x);
+        v2.setAttribute("height",h)
+        v2.setAttribute("width",w)
+    }
+    function change() {
+        var h=document.getElementById("h").value;
+        var w=document.getElementById("w").value;
+        var v2=document.getElementById("if");
+        v2.setAttribute("height",h)
+        v2.setAttribute("width",w)
+    }
+    </script>
+</html>

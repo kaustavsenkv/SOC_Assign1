@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+iframe{
+    height: 800px;
+    width: 600px;
+}
+</style>
+<center>   <h1>My First sub-window</h1>
+<select id="sel">
+    <option>Google</option>
+    <option>Hbo</option>
+    <option>Wikipedia</option>
+</select>
+<input type="button" value="Go" onclick="fun();">
+<br>
+<iframe id="if" src="" height=100% width=50%>
+</iframe>
+</center>
+ 
+</body>
+<script>
+function fun(){
+   var link=document.getElementById('sel').value;
+   var go;
+  switch(link){
+      case 'Google': go='https://www.google.com/webhp?igu=1' ;break;
+      case 'Hbo': go='https://www.hbo.com' ;break;
+      case 'Wikipedia': go='https://www.wikipedia.org/' ;break; 
+  }
+  var v= document.getElementById('if');
+  v.setAttribute('src',go);
+}
+</script>
+</html>
